@@ -770,7 +770,7 @@
                         var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
                         msg = basicBot.settings.intervalMessages[messageNumber];
                     }
-                    API.sendChat('/me '+msg);
+                    setTimeout(function(){ API.sendChat('/me '+msg); }, 1000);
                 }
             },
             updateBlacklists: function () {
